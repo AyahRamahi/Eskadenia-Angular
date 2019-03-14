@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+  <h2>Insert your to do here:</h2>
+  <input (keyup.enter)="onkeyup($event)" [(ngModel)]="newToDo">
+</div>
+
+<div class="list">
+  <!--
+    change color of this text depending on number of added to dos
+    <h2 id="listState" [style.color]="toDoCount > 0? 'blue' : 'red' ">Your list it empty :(</h2>
+  -->
+  <h2 id="listState" [class]="toDoCount > 0? 'blue' : 'red' ">Your list is empty :(</h2>
+  <ul id="toDos"></ul>
+</div>
